@@ -1,0 +1,68 @@
+banco_de_dados
+sql
+python
+pandas
+numpy
+pyTorch
+seaborn
+sxikit-learn
+tensorFlow
+hadoop
+estatistica
+machine_learn
+git
+apache_airflow
+api_rest
+matematica
+algebra_linear
+
+# Features
+python
+pandas
+numpy
+sxikit-learn
+tensorFlow
+sql
+estatística
+aprendizado_marquina
+algebra_linear
+api
+git
+
+
+# Classes
+1-junior
+2-pleno
+3-senior
+
+# Parametros
+1.0 á 10.0
+
+
+
+------------------------------------------------------------------
+
+Idéias
+
+# Algorítimo rodar igual um Job, e gerar Log no banco de dados.
+
+# Criar um front para preencher os dados e quando gravar no banco de dados
+ rodar o algorítimo e classificar o usuario.
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
