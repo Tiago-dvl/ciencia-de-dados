@@ -44,7 +44,7 @@
 
 **<mark>O que é Sobreajuste (Overfiting)?</mark>**
 
-    Quando o modelo aprende demais os dados de treinamento ou de forma muito específica, incluindo o "ruído". O modelo irá memorizar ao invés de generalizar.
+    Quando **o modelo aprende demais os dados de treinamento** ou de forma muito específica, incluindo o "ruído". O modelo irá memorizar ao invés de generalizar.
 
 * Obs: O modelo sobreajustado terá um ótimo desempenho nos dados de treino, mas irá fracassar em dados novos (teste ou produção), por quê nao irá generalizar bem os novos dados.
 
@@ -73,9 +73,45 @@ Continuar (precisão e sensibilizade)..
 
 
 **<mark>O que é uma Matriz de Confusão?</mark>**
+    É uma tabela que resume o desempenho de um algorítimo de classificação, mostrando os acertos e erros em relação ás classes reais. De forma resumida, a tabela mostra o que o modelo previo com o que era real.
+
+Estrutura da Matriz...
+
+| Classe        | Previsto Positivo        | Previsto Negativo        |
+| ------------- | ------------------------ | ------------------------ |
+| Real Positivo | Verdadeiro Positivo (VP) | Falso Negativo (FN)      |
+| Real Negativo | Falso Positivo (FP)      | Verdadeiro Negativo (VN) |
+
+- **VP (Verdadeiro Positivo)**: o modelo acertou um **positivo**.
+
+- **VN (Verdadeiro Negativo)**: o modelo acertou um **negativo**.
+
+- **FP (Falso Positivo)**: o modelo **errou**, dizendo que era positivo.
+
+- **FN (Falso Negativo)**: o modelo **errou**, dizendo que era negativo.
 
 
 
+ ****Exemplo simples (gatos vs não-gatos):****
+
+|                | Previsto Gato | Previsto Não-Gato |
+| -------------- | ------------- | ----------------- |
+| **É Gato**     | 8 (VP)        | 2 (FN)            |
+| **Não é Gato** | 1 (FP)        | 9 (VN)            |
+
+O modelo acertou **8 gatos** e **9 nao-gatos**, erro **1 não-gato** como gato, e deixou **2 gatos** passarem.
+
+
+
+* A matriz de confusão ajuda a calcular as métricas:
+  
+  * Acurácia
+  
+  * Precisão
+  
+  * Sensibilidade (Recall)
+  
+  * F1-Score
 
 
 
@@ -110,3 +146,74 @@ Continuar (precisão e sensibilizade)..
 Então:
 
 Sensibilidade = 9 + (6 + 9) ​= 0,6 ou **60% de Sensibilidade**
+
+
+
+<mark>**O que são as Features?**</mark>
+
+    As features, ou **entradas específicas**, são as informações fornecidas ao modelo, as **variáveis de entrada** que o modelo usa para **aprender e fazer previsões**.
+
+Exemplo: 
+
+    Um modelo treinando para **classificar animais** em fotos:
+
+- **Features**: número de patas, presença de pelos, tamanho, etc.
+
+
+
+**<mark>O que são os Rótulos?</mark>**
+
+    São os **valores reais** que o modelo precisa **aprender a prever**.  Eles representam a **resposta correta** para cada exemplo de treino.
+
+Exemplo:
+
+Um modelo treinando para **classificar animais** em fotos:
+
+- **Rótulos**: gato ou cachorro.
+
+
+
+**<mark>O que é Generalização?</mark>**
+
+    É a **capacidade do modelo de fazer boas previsões em dados novos**, que ele nunca viu antes.
+
+Comparação:
+
+| Situação                  | Generaliza bem? |
+| ------------------------- | --------------- |
+| Vai bem só no treino      | ❌ Não           |
+| Vai bem no treino e teste | ✅ Sim           |
+
+**Como melhorar a generalização:**
+
+- Usar mais dados de treino
+
+- Evitar modelos muito complexos
+
+- Usar validação cruzada
+
+ O que é Classificação Binária?
+
+    É um tipo de problema de prendizado de máquina onde o modelo deve escolher entre duas classes possíveis.
+
+    **Obs:** O modelo responde: **“Sim ou Não”**, **“Verdadeiro ou Falso”**, **“1 ou 0”**, **“Positivo ou Negativo”**.
+
+**Exemplo:** 
+
+- **E-mail**: spam ou não spam
+
+- **Doença**: doente ou saudável
+
+- **Pagamento**: será feito ou não
+
+- **Foto**: é um gato ou não é?
+
+Saída do Modelo:
+
+### Saída do modelo:
+
+- Pode ser **direta** (ex: `1` ou `0`)
+
+- Ou uma **probabilidade** (ex: `0.87` de ser spam)
+
+---
