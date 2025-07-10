@@ -2,8 +2,6 @@
 
 ---
 
-
-
 **<mark>O que é um Modelo em Machine Learn?</mark>**
 
     Modelo é o **resultado de um processo de treinamento** e teste de um algorítimo com dados. O algorítimo, após ter aprendido a executar a tarefa específica na qual foi designinada, se torna um modelo.
@@ -12,15 +10,11 @@
 
 * <u>Obs:</u> Um modelo de Machine Learn é utilizado para: fazer previsões, classificação, regressão e tomar decisões sobre os novos dados, com base no que já aprendeu.
 
-
-
 **<mark>O que são Parâmetros?</mark>**
 
     São os **valores internos que são ajustados** durante o processo de treinamento de um modelo. Durante o processo de aprendizado de um algorítimo, os parâmetros internos são ajustados, de forma a minimizar os erros da previsão. 
 
 * <u>Obs:</u> Após encontrar os valores adequados, estes se tornam os parâmetros do modelo.
-
-
 
 **<mark>O que é Subajuste (Underfiting)?</mark>**
 
@@ -70,6 +64,49 @@
   
   * Cross-validation
 
-
-
 Continuar (precisão e sensibilizade)..
+
+
+
+## Métricas Para Análise de Desempenho
+
+
+
+**<mark>O que é uma Matriz de Confusão?</mark>**
+
+
+
+
+
+
+**<mark>O que é Precisão(Precision)?</mark>**
+
+    É a **qualidade das previsões positivas** do modelo. Mede **quantos dos ítens** que o modelo previo **como positivos realmente são positivos**.
+
+**Fórmula:** Precisão = Verdadeiros Positivos  / (Verdadeiros positivos +                                      Falsos Positivos)
+
+**Exemplo**: Um modelo para detectar **gatos em fotos**:
+
+- O modelo disse que havia **10 gatos**
+
+- Mas só **7 realmente eram gatos** (3 eram cachorros)
+
+    Então:  Precisão = 7 / (7+3)​ = 7 / 10 = 0,7 ou **70% de Precisão**
+
+
+
+**<mark>O que é Sensibilidade(Recall)?</mark>**
+
+    É a capacidade do modelo de encontrar todos os casos positivos reais. Mede quantos dos ítens realmente positivo foram identificados pelo modelo.
+
+**Fórmula:** Sensibilidade = Verdadeiros Positivos / (Verdadeiros                                               positivos + Falsos Negativos)
+
+**Exemplo:** Um modelo para **detecção de gatos em fotos**:
+
+- Havia **15 gatos reais** nas imagens
+
+- O modelo encontrou **9 gatos**, mas **errou 6** (não detectou)
+
+Então:
+
+Sensibilidade = 9 + (6 + 9) ​= 0,6 ou **60% de Sensibilidade**
